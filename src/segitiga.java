@@ -107,7 +107,16 @@ public class segitiga extends javax.swing.JFrame {
 
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("output"));
 
-        tluas.setText("jLabel4");
+        tluas.setText("0.0");
+        tluas.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tluasAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
@@ -152,9 +161,8 @@ public class segitiga extends javax.swing.JFrame {
                         .addComponent(btnhitung, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
                         .addComponent(btnreset))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -202,6 +210,10 @@ public class segitiga extends javax.swing.JFrame {
         // TODO add your handling code here:
         reset();
     }//GEN-LAST:event_btnresetActionPerformed
+
+    private void tluasAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tluasAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tluasAncestorAdded
 
     /**
      * @param args the command line arguments
