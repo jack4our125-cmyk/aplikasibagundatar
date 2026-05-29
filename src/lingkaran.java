@@ -84,14 +84,14 @@ public class lingkaran extends javax.swing.JFrame {
 
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("output"));
 
-        tluaslingkaran.setText("jLabel4");
+        tluaslingkaran.setText("0.0 ");
 
         javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
         outputLayout.setHorizontalGroup(
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(outputLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(149, 149, 149)
                 .addComponent(tluaslingkaran)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -119,13 +119,11 @@ public class lingkaran extends javax.swing.JFrame {
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1)
-                                        .addGap(8, 8, 8)))))))
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1)
+                                .addGap(8, 8, 8))
+                            .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(19, 19, 19))
         );
         layout.setVerticalGroup(
@@ -162,10 +160,9 @@ public class lingkaran extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        double jariJari = Double.parseDouble(tjari.getText());
-        double luas = 3.14* jariJari * jariJari;
-        tluaslingkaran .setText(String.valueOf(luas));
-
+         double jari = Double.parseDouble(tjari.getText());
+        double luas = 3.14*jari*jari ;
+        tluaslingkaran.setText(String.valueOf(luas));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

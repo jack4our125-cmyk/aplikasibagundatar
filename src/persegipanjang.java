@@ -1,6 +1,3 @@
-
-import javax.xml.xpath.XPathEvaluationResult;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -10,22 +7,21 @@ import javax.xml.xpath.XPathEvaluationResult;
  *
  * @author Hype G12
  */
-public class segitiga extends javax.swing.JFrame {
+public class persegipanjang extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(segitiga.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(persegipanjang.class.getName());
 
     /**
-     * Creates new form segitiga
+     * Creates new form persegipanjang
      */
-    public segitiga() {
+    public persegipanjang() {
         initComponents();
-        reset();
-        
+        reset ();
     }
-    void reset(){
-        Talas.setText(null);
-        ttinggi.setText(null);
-        tluas.setText(null);
+     void reset(){
+        tlebar.setText(null);
+        tpanjang.setText(null);
+        tluas.setToolTipText(null);
     }
 
     /**
@@ -37,46 +33,32 @@ public class segitiga extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnexit = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        Talas = new javax.swing.JTextField();
-        ttinggi = new javax.swing.JTextField();
+        tpanjang = new javax.swing.JTextField();
+        tlebar = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         output = new javax.swing.JPanel();
         tluas = new javax.swing.JLabel();
         btnhitung = new javax.swing.JButton();
-        btnreset = new javax.swing.JButton();
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 286, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jButton1 = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("segitiga");
-
-        btnexit.setText("exit");
-        btnexit.addActionListener(this::btnexitActionPerformed);
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("persegi panjang");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("input"));
 
-        Talas.addActionListener(this::TalasActionPerformed);
+        tpanjang.addActionListener(this::tpanjangActionPerformed);
 
-        ttinggi.addActionListener(this::ttinggiActionPerformed);
+        tlebar.addActionListener(this::tlebarActionPerformed);
 
-        jLabel2.setText("alas");
+        jLabel2.setText("panjang");
 
-        jLabel3.setText("tinggi");
+        jLabel3.setText("lebar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,60 +70,54 @@ public class segitiga extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(ttinggi)
-                    .addComponent(Talas, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
-                .addGap(69, 69, 69))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tpanjang, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tlebar, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Talas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tpanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ttinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tlebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("output"));
 
-        tluas.setText("0.0");
-        tluas.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                tluasAncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
+        tluas.setText("jLabel4");
 
         javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
         outputLayout.setHorizontalGroup(
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(outputLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(tluas)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, outputLayout.createSequentialGroup()
+                .addContainerGap(126, Short.MAX_VALUE)
+                .addComponent(tluas, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(117, 117, 117))
         );
         outputLayout.setVerticalGroup(
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(outputLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(15, 15, 15)
                 .addComponent(tluas)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         btnhitung.setText("hitung");
         btnhitung.addActionListener(this::btnhitungActionPerformed);
 
-        btnreset.setText("reset");
-        btnreset.addActionListener(this::btnresetActionPerformed);
+        jButton1.setText("reset");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        exit.setText("exit");
+        exit.addActionListener(this::exitActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,77 +125,71 @@ public class segitiga extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(171, 171, 171))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnexit)
-                        .addContainerGap())))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnhitung, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
-                        .addComponent(btnreset))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(output, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 62, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnhitung)
+                            .addGap(191, 191, 191)
+                            .addComponent(jButton1)
+                            .addGap(70, 70, 70)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(exit)
+                        .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnhitung)
-                    .addComponent(btnreset))
-                .addGap(22, 22, 22)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(btnexit)
-                .addGap(18, 18, 18))
+                .addGap(18, 18, 18)
+                .addComponent(exit)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexitActionPerformed
+    private void tpanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tpanjangActionPerformed
         // TODO add your handling code here:
-        dispose();
-        new home().setVisible(true);
-    }//GEN-LAST:event_btnexitActionPerformed
+        
+    }//GEN-LAST:event_tpanjangActionPerformed
 
-    private void ttinggiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ttinggiActionPerformed
+    private void tlebarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tlebarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ttinggiActionPerformed
+    }//GEN-LAST:event_tlebarActionPerformed
 
     private void btnhitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhitungActionPerformed
         // TODO add your handling code here:
-        double alas = Double.parseDouble(Talas.getText());
-        double tinggi = Double.parseDouble(ttinggi.getText());
-        double luas = 0.5*alas*tinggi ;
+         double lebar = Double.parseDouble(tlebar.getText());
+         double panjang= Double.parseDouble(tpanjang.getText());
+        double luas = lebar*panjang ;
         tluas.setText(String.valueOf(luas));
-        
-        
     }//GEN-LAST:event_btnhitungActionPerformed
 
-    private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         reset();
-    }//GEN-LAST:event_btnresetActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void tluasAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tluasAncestorAdded
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tluasAncestorAdded
-
-    private void TalasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TalasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TalasActionPerformed
+        dispose();
+        new home().setVisible(true);
+    }//GEN-LAST:event_exitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,21 +213,20 @@ public class segitiga extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new segitiga().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new persegipanjang().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Talas;
-    private javax.swing.JButton btnexit;
     private javax.swing.JButton btnhitung;
-    private javax.swing.JButton btnreset;
+    private javax.swing.JButton exit;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel output;
+    private javax.swing.JTextField tlebar;
     private javax.swing.JLabel tluas;
-    private javax.swing.JTextField ttinggi;
+    private javax.swing.JTextField tpanjang;
     // End of variables declaration//GEN-END:variables
 }

@@ -54,6 +54,7 @@ public class home extends javax.swing.JFrame {
         btnexit.addActionListener(this::btnexitActionPerformed);
 
         jButton1.setText("persegi");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
         jButton2.setText("belahketupat");
         jButton2.addActionListener(this::jButton2ActionPerformed);
@@ -113,6 +114,8 @@ public class home extends javax.swing.JFrame {
 
     private void btnpersegipanjangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpersegipanjangActionPerformed
         // TODO add your handling code here:
+        new persegipanjang().setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnpersegipanjangActionPerformed
 
     private void btnsegitigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsegitigaActionPerformed
@@ -139,6 +142,13 @@ public class home extends javax.swing.JFrame {
         new lingkaran().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnlingkaranActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new persegi().setVisible(true);
+        dispose();
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
