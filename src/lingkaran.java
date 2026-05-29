@@ -84,15 +84,15 @@ public class lingkaran extends javax.swing.JFrame {
 
         output.setBorder(javax.swing.BorderFactory.createTitledBorder("output"));
 
-        tluaslingkaran.setText("0.0 ");
+        tluaslingkaran.setText("0 ");
 
         javax.swing.GroupLayout outputLayout = new javax.swing.GroupLayout(output);
         output.setLayout(outputLayout);
         outputLayout.setHorizontalGroup(
             outputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(outputLayout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(tluaslingkaran)
+                .addGap(95, 95, 95)
+                .addComponent(tluaslingkaran, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         outputLayout.setVerticalGroup(
@@ -161,7 +161,7 @@ public class lingkaran extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
          double jari = Double.parseDouble(tjari.getText());
-        double luas = 3.14*jari*jari ;
+        double luas = Math.PI*jari*jari ;
         tluaslingkaran.setText(String.valueOf(luas));
     }//GEN-LAST:event_jButton2ActionPerformed
 
