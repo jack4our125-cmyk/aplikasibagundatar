@@ -21,7 +21,7 @@ public class persegipanjang extends javax.swing.JFrame {
      void reset(){
         tlebar.setText(null);
         tpanjang.setText(null);
-        tluas.setToolTipText(null);
+        tluas.setText(null);
     }
 
     /**
