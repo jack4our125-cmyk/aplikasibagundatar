@@ -20,7 +20,7 @@ public class lingkaran extends javax.swing.JFrame {
     }
     void reset(){
         tjari.setText(null);
-        tluaslingkaran.setToolTipText(null);
+        tluaslingkaran.setText(null);
         
     }
 
