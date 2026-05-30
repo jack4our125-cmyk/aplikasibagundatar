@@ -162,7 +162,7 @@ public class lingkaran extends javax.swing.JFrame {
         // TODO add your handling code here:
          double jari = Double.parseDouble(tjari.getText());
         double luas = Math.PI*jari*jari ;
-        tluaslingkaran.setText(String.valueOf(luas));
+        tluaslingkaran.setText(String.format("%.2f" ,luas));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
